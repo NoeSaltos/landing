@@ -74,7 +74,7 @@ let sendData = () => {
                 for (let [date, count] of countSuscribers) {
                     let rowTemplate = `
                         <tr>
-                            <th scope="row">1</th>
+                            <th scope="row">*</th>
                             <td>${date}</td>
                             <td>${count}</td>
                         </tr>`
@@ -123,6 +123,26 @@ let loaded = () => {
         return;
 
         }
+
+        const preferenceElement = document.querySelector('#formPreference');
+        const preferenceValue = preferenceElement.value;
+
+        if (!preferenceValue) {
+            preferenceElement.focus();
+
+            preferenceElement.animate(
+                [
+                    { transform: "translateX(0)" },
+                    { transform: "translateX(50px)" },
+                    { transform: "translateX(-50px)" },
+                    { transform: "translateX(0)" }
+                ],
+                { duration: 400, easing: "linear" }
+            );
+
+            return;
+        }
+
         sendData();
 
     });

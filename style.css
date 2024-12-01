@@ -657,6 +657,8 @@ a {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
+
+
 .is-visible .search-popup-container {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
