@@ -4,7 +4,7 @@ var tl = gsap.timeline({
         start: "9% 95%",
         end: "10% 10%",
         scrub: true,
-        markers: true,
+
     }
 });
 
