@@ -70,11 +70,16 @@
 
 /*------------------------------*/
 /* Estilo general */
+#barra{
+    background-color: white;
+}
+
 .navbar-nav {
     display: flex;
     gap: 1.5rem;
     padding: 0;
     margin: 0;
+
   }
   
   .nav-item .nav-link {

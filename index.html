@@ -220,8 +220,9 @@
     </div>
   </div>
 <!-- Menu de opciones en la parte de arriba -->
+<!-- bg-light -->
 
-<nav class="navbar navbar-expand-lg bg-light text-uppercase fs-6 p-3 border-bottom">
+<nav id="barra" class="navbar navbar-expand-lg  text-uppercase fs-6 p-3 border-bottom">
   <div class="container-fluid">
     <!-- Logo -->
     <a class="navbar-brand" href="index.html">
@@ -240,8 +241,7 @@
         <li class="nav-item"><a class="nav-link" href="#nuestros-cocteles">Nuestros Cócteles</a></li>
         <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
         <li class="nav-item"><a class="nav-link" href="#blog">Experimenta</a></li>
-        <li class="nav-item"><a class="nav-link" href="#suscribete">Suscríbete</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contactanos">Contáctanos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#footer">Contáctanos</a></li>
       </ul>
     </div>
 
@@ -252,8 +252,7 @@
         <li><a href="#nuestros-cocteles">Nuestros Cócteles</a></li>
         <li><a href="#testimonios">Testimonios</a></li>
         <li><a href="#blog">Experimenta</a></li>
-        <li><a href="#suscribete">Suscríbete</a></li>
-        <li><a href="#contactanos">Contáctanos</a></li>
+        <li><a href="#footer">Contáctanos</a></li>
       </ul>
       <button class="close-btn">&times;</button>
     </div>
@@ -447,7 +446,7 @@
         <a href="index.html" class="btn-link">View All Products</a>
       </div>
       <div class="swiper product-swiper open-up" data-aos="zoom-out">
-        <div class="swiper-wrapper d-flex">
+        <div class="swiper-wrapper d-flex ">
           <div class="swiper-slide">
             <div class="product-item image-zoom-effect link-effect">
               <div class="image-holder">
@@ -532,7 +531,7 @@
             <div class="product-item image-zoom-effect link-effect">
               <div class="image-holder">
                 <a href="index.html">
-                  <img src="images/product-item-9.jpg" alt="categories" class="product-image img-fluid">
+                  <img src="imagenes/banner-light.jpg" alt="categories" class="product-image img-fluid">
                 </a>
                 <a href="index.html" class="btn-icon btn-wishlist">
                   <svg width="24" height="24" viewBox="0 0 24 24">
@@ -541,9 +540,9 @@
                 </a>
                 <div class="product-content">
                   <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Dark florish onepiece</a>
+                    <a href="index.html">Light Blue cocktail</a>
                   </h5>
-                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$70.00</span></a>
+                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$7.00</span></a>
                 </div>
               </div>
             </div>
@@ -552,7 +551,7 @@
             <div class="product-item image-zoom-effect link-effect">
               <div class="image-holder">
                 <a href="index.html">
-                  <img src="images/product-item-10.jpg" alt="categories" class="product-image img-fluid">
+                  <img src="imagenes/banner-fruti.jpg" alt="categories" class="product-image img-fluid">
                 </a>
                 <a href="index.html" class="btn-icon btn-wishlist">
                   <svg width="24" height="24" viewBox="0 0 24 24">
@@ -561,9 +560,9 @@
                 </a>
                 <div class="product-content">
                   <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Cotton off-white shirt</a>
+                    <a href="index.html">FrutiLover cocktail</a>
                   </h5>
-                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$70.00</span></a>
+                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$8.00</span></a>
                 </div>
               </div>
             </div>
@@ -585,16 +584,24 @@
       <div class="row">
         <div class="video-content open-up" data-aos="zoom-out">
           <div class="video-bg">
-            <img src="images/video-image.jpg" alt="video" class="video-image img-fluid">
+            <video
+              src="video/wiskyFi.mp4" 
+              alt="video" 
+              class="video-image img-fluid" 
+              autoplay 
+              loop 
+              muted 
+              playsinline>
+            </video>
           </div>
-          <div class="video-player">
+          <!-- <div class="video-player">
             <a class="youtube" href="https://www.youtube.com/embed/pjtsGzQjFM4">
               <svg width="24" height="24" viewBox="0 0 24 24">
                 <use xlink:href="#play"></use>
               </svg>
               <img src="images/text-pattern.png" alt="pattern" class="text-rotate">
             </a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -643,7 +650,7 @@
     <div class="testimonial-swiper-pagination d-flex justify-content-center mb-5"></div>
   </section>
 
-  <section id="related-products" class="related-products product-carousel py-5 position-relative overflow-hidden">
+  <!-- <section id="related-products" class="related-products product-carousel py-5 position-relative overflow-hidden">
     <div class="container">
       <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
         <h4 class="text-uppercase">You May Also Like</h4>
@@ -761,69 +768,65 @@
           <use xlink:href="#arrow-right"></use>
         </svg></div>
     </div>
-  </section>
+  </section> -->
 
   <section id="blog" class="blog py-5">
     <div class="container">
       <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
         <h4 class="text-uppercase">Read Blog Posts</h4>
-        <a href="index.html" class="btn-link">View All</a>
+        <a href="https://www.frigicoll.es/blog/lista-tipos-cocteles-mas-famosos-del-mundo/" class="btn-link">View All</a>
       </div>
       <div class="row">
         <div class="col-md-4">
           <article class="post-item">
             <div class="post-image">
-              <a href="index.html">
-                <img src="images/post-image1.jpg" alt="image" class="post-grid-image img-fluid">
+              <a href="https://www.frigicoll.es/blog/lista-tipos-cocteles-mas-famosos-del-mundo/">
+                <img src="imagenes/blog19.jpg" alt="image" class="post-grid-image img-fluid">
               </a>
             </div>
             <div class="post-content d-flex flex-wrap gap-2 my-3">
               <div class="post-meta text-uppercase fs-6 text-secondary">
-                <span class="post-category">Fashion /</span>
+                <span class="post-category">Drinks /</span>
                 <span class="meta-day"> jul 11, 2022</span>
               </div>
               <h5 class="post-title text-uppercase">
-                <a href="index.html">How to look outstanding in pastel</a>
+                <a href="index.html">Top 20 cócteles más famosos</a>
               </h5>
-              <p>Dignissim lacus,turpis ut suspendisse vel tellus.Turpis purus,gravida orci,fringilla...</p>
+              <p>La mezcla de bebidas, con o sin alcohol, e ingredientes de todo tipo como frutas, zumos, azúcar o cremas da origen a cócteles para todos los gustos.</p>
             </div>
           </article>
         </div>
         <div class="col-md-4">
           <article class="post-item">
             <div class="post-image">
-              <a href="index.html">
-                <img src="images/post-image2.jpg" alt="image" class="post-grid-image img-fluid">
-              </a>
-            </div>
-            <div class="post-content d-flex flex-wrap gap-2 my-3">
+              <iframe width="415" height="265" src="https://www.youtube.com/embed/8kIMndNnVso?si=4CbGMMgNKtoRF9Ik&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            <div class="post-content d-flex flex-wrap gap-2 my-3">
               <div class="post-meta text-uppercase fs-6 text-secondary">
-                <span class="post-category">Fashion /</span>
-                <span class="meta-day"> jul 11, 2022</span>
+                <span class="post-category">Drinks /</span>
+                <span class="meta-day"> May 20, 2019</span>
               </div>
               <h5 class="post-title text-uppercase">
-                <a href="index.html">Top 10 fashion trend for summer</a>
+                <a href="https://www.youtube.com/embed/8kIMndNnVso?si=4CbGMMgNKtoRF9Ik&amp;controls=0">Clericot de melocotón</a>
               </h5>
-              <p>Turpis purus, gravida orci, fringilla dignissim lacus, turpis ut suspendisse vel tellus...</p>
+              <p>Saca el mejor vino blanco que tengas en tu armario para vinos Liebherr, y prepara este sorprendente Clericot de melocotón.</p>
             </div>
           </article>
         </div>
         <div class="col-md-4">
           <article class="post-item">
             <div class="post-image">
-              <a href="index.html">
-                <img src="images/post-image3.jpg" alt="image" class="post-grid-image img-fluid">
+              <a href="https://www.directoalpaladar.com/otras-bebidas/24-cocteles-faciles-que-puedes-hacer-casa-para-no-echar-bares">
+                <img src="imagenes/blog29.jpg" alt="image" class="post-grid-image img-fluid">
               </a>
             </div>
             <div class="post-content d-flex flex-wrap gap-2 my-3">
               <div class="post-meta text-uppercase fs-6 text-secondary">
-                <span class="post-category">Fashion /</span>
-                <span class="meta-day"> jul 11, 2022</span>
+                <span class="post-category">Drinks /</span>
+                <span class="meta-day"> Sep 16, 2022</span>
               </div>
               <h5 class="post-title text-uppercase">
-                <a href="index.html">Crazy fashion with unique moment</a>
+                <a href="https://www.directoalpaladar.com/otras-bebidas/24-cocteles-faciles-que-puedes-hacer-casa-para-no-echar-bares">29 recetas de cócteles</a>
               </h5>
-              <p>Turpis purus, gravida orci, fringilla dignissim lacus, turpis ut suspendisse vel tellus...</p>
+              <p>Esta selección de cócteles clásicos te ayudará a dar un toque de color a las festividades.</p>
             </div>
           </article>
         </div>
@@ -845,7 +848,7 @@
     </div>
   </section>
 
-  <section class="newsletter bg-light" style="background: url(images/pattern-bg.png) no-repeat;">
+  <section id="suscribete" class="newsletter bg-light" style="background: url(images/pattern-bg.png) no-repeat;">
     <div class="container">
       <div class="row justify-content-center">
         <!-- DIV contenedor del formulario -->
@@ -996,20 +999,17 @@
                             <a href="index.html" class="item-anchor">Inicio</a>
                         </li>
                         <li class="menu-item">
-                            <a href="about.html" class="item-anchor">Nuestros Cócteles</a>
+                            <a href="#nuestros-cocteles" class="item-anchor">Nuestros Cócteles</a>
                         </li>
                         <li class="menu-item">
-                            <a href="recetas.html" class="item-anchor">Testimonios</a>
+                            <a href="#testimonios" class="item-anchor">Testimonios</a>
                         </li>
                         <li class="menu-item">
-                            <a href="blog.html" class="item-anchor">Experimenta</a>
+                            <a href="#blog" class="item-anchor">Experimenta</a>
                         </li>
                         <li class="menu-item">
-                            <a href="contact.html" class="item-anchor">Suscríbete</a>
+                            <a href="#suscribete" class="item-anchor">Suscríbete</a>
                         </li>
-                        <li class="menu-item">
-                          <a href="blog.html" class="item-anchor">Contáctanos</a>
-                      </li>
                     </ul>
                 </div>
             </div>
