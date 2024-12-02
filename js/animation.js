@@ -1,34 +1,106 @@
-var tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".collection.bg-light.position-relative.py-5",
-        start: "9% 95%",
-        end: "10% 10%",
-        scrub: true,
+// Función para inicializar todas las animaciones
+function initAnimations() {
+    // Mata todas las animaciones y ScrollTriggers existentes
+    gsap.killTweensOf("#mojito, #limon, #salpica, #leaf, #leaf2");
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 
+    // Crea el timeline principal con ScrollTrigger
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".collection.bg-light.position-relative.py-5",
+            start: "9% 95%",
+            end: "10% 10%",
+            scrub: true,
+            markers: true, // Cambiar a false si no necesitas los marcadores
+        }
+    });
+
+    // Detecta el ancho de la ventana para definir las animaciones
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 576) {
+        // Animaciones para pantallas pequeñas (≤576px)
+        tl.to("#mojito", {
+            top: "130%",
+            left: "80%",
+            x: "-50%"
+        });
+        tl.to("#limon", {
+            top: "155%",
+            left: "70%",
+            x: "-50%"
+        }, "-=0.2"); // Alineado ligeramente con mojito
+        tl.to("#salpica", {
+            width: "27%",
+            top: "155%",
+            left: "21%"
+        }, "-=0.2");
+    } else if (screenWidth > 576 && screenWidth <= 991) {
+        // Animaciones para pantallas medianas (>576px y ≤991px)
+        tl.to("#mojito", {
+            top: "160%",
+            left: "50%",
+            x: "-30%"
+        });
+        tl.to("#limon", {
+            top: "205%",
+            left: "50%",
+            x: "-50%"
+        }, "-=0.2");
+        tl.to("#salpica", {
+            width: "20%",
+            top: "200%",
+            left: "10%"
+        }, "-=0.2");
+    } else {
+        // Animaciones para pantallas grandes (>991px)
+        tl.to("#mojito", {
+            top: "125%",
+            left: "10%"
+        });
+        tl.to("#limon", {
+            top: "185%",
+            left: "32%"
+        }, "orange");
+        tl.to("#salpica", {
+            width: "15%",
+            top: "180%",
+            right: "65%"
+        }, "orange");
+        tl.to("#leaf", {
+            top: "110%",
+            rotate: "130deg",
+            left: "70%"
+        }, "orange");
+        tl.to("#leaf2", {
+            top: "110%",
+            rotate: "130deg",
+            left: "0%"
+        }, "orange");
     }
+}
+
+// Llama a la función al cargar la página
+initAnimations();
+
+// Maneja redimensionamiento para recalcular y actualizar animaciones
+let resizeTimeout; // Para evitar múltiples llamadas durante el redimensionamiento
+window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        ScrollTrigger.refresh(); // Refresca posiciones y límites
+        initAnimations(); // Reinicia animaciones
+    }, 100); // Espera 100ms para evitar múltiples ejecuciones
 });
 
-if (window.innerWidth <= 576) {
-    // Para pantallas muy pequeñas
-    tl.to("#mojito", {
-        top: "130%",   // Hace que se mueva hacia abajo
-        left: "50%",   // Centra el elemento horizontalmente
-        x: "-50%"      // Ajusta el desplazamiento para que el centro del elemento esté centrado
-    });
-} else if (window.innerWidth > 576 && window.innerWidth <= 991) {
-    // Para pantallas medianas (md) entre 576px y 991px
-    tl.to("#mojito", {
-        top: "130%",   // Mueve el elemento un poco hacia abajo
-        left: "30%",   // Coloca el elemento más a la izquierda (ajustar según necesites)
-        x: "-30%"      // Ajusta el desplazamiento para que esté centrado proporcionalmente
-    });
-} else {
-    // Para pantallas más grandes
-    tl.to("#mojito", {
-        top: "120%",   // Mueve el elemento un poco hacia abajo
-        left: "10%"    // Mantén la posición a la izquierda
-    });
-}
+
+
+
+
+
+
+
+
 
 
 
@@ -70,6 +142,17 @@ document.querySelectorAll('.btn-wishlist').forEach((wishlistBtn) => {
     });
   });
 
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+      offset: 0, // Sin margen extra
+      once: true, // Ejecutar animación solo una vez
+      duration: 800,
+      easing: 'ease-out',
+    });
+    AOS.refresh(); // Refresca para ajustar posiciones inmediatamente
+  });
 
 
 
