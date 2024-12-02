@@ -48,3 +48,33 @@ document.querySelectorAll('.btn-wishlist').forEach((wishlistBtn) => {
 
 
 
+/*----------------------NAV--------------------------------*/ 
+  const menuToggle = document.getElementById('menuToggle');
+  const overlayMenu = document.getElementById('overlayMenu');
+  const closeButton = overlayMenu.querySelector('.close-btn');
+
+  // Abrir menú toggle
+  menuToggle.addEventListener('click', () => {
+    overlayMenu.classList.add('show');
+  });
+
+  // Cerrar menú toggle
+  closeButton.addEventListener('click', () => {
+    overlayMenu.classList.remove('show');
+  });
+
+  // Cerrar menú al hacer clic en una opción
+  overlayMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      overlayMenu.classList.remove('show');
+    });
+  });
+
+
+
+
+
+
+
+
+

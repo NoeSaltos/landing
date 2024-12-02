@@ -68,3 +68,89 @@
     }
 }
 
+/*------------------------------*/
+/* Estilo general */
+.navbar-nav {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-item .nav-link {
+    text-decoration: none;
+  }
+  
+  .nav-item .nav-link:hover {
+    /* color: #ffcc00; */
+  }
+  
+  /* Menú tradicional (pantallas grandes) */
+  #menuNav {
+    display: flex;
+  }
+  
+  /* Botón toggle y overlay para pantallas pequeñas */
+  .overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay-menu .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .overlay-menu .menu-list li {
+    margin: 1.5rem 0;
+  }
+  
+  .overlay-menu .menu-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .overlay-menu .menu-list a:hover {
+    color: #ffcc00;
+  }
+  
+  .overlay-menu .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .overlay-menu.show {
+    display: flex;
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media (max-width: 991px) {
+    #menuNav {
+      display: none; /* Oculta el menú tradicional */
+    }
+  
+    #menuToggle {
+      display: block; /* Muestra el botón toggle */
+    }
+  }
+  
+  
