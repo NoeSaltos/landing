@@ -751,10 +751,13 @@ var supportsPassive = false;
 try {
   window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
     get: function () {
-            supportsPassive = true;
-        } 
-    }));
-} catch(e) {}
+      supportsPassive = true;
+    }
+  }));
+} catch (e) {
+  console.warn("Passive event listener detection failed:", e);
+}
+
 
 var wheelOpt = supportsPassive ? { passive: false } : false;
 var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel'; 
